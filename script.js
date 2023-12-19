@@ -1,22 +1,23 @@
-// Selecting elements
-const header = document.querySelector('header');
-const main = document.querySelector('main');
-const footer = document.querySelector('footer');
+// script.js
 
-// Changing styles or adding functionality
-header.addEventListener('click', function() {
-    this.style.backgroundColor = 'red'; // Changes header color to red on click
+// Select elements
+const exploreBtn = document.getElementById('exploreBtn');
+const contactForm = document.getElementById('contactForm');
+
+// Explore button functionality
+exploreBtn.addEventListener('click', function() {
+    // Logic to handle exploring destinations
+    // For example, redirect to the destinations section:
+    document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' });
 });
 
-// Example of adding a new element to the main section
-const newParagraph = document.createElement('p');
-newParagraph.textContent = 'This is a new paragraph added via JavaScript!';
-main.appendChild(newParagraph);
-
-// Example of handling a form submission
-const form = document.querySelector('form');
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents the default form submission behavior
-    const inputValue = document.querySelector('#inputField').value; // Get value from an input field
-    alert(`You submitted: ${inputValue}`); // Display an alert with the submitted value
+// Form submission handling
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Simulating form submission by logging form data
+    const formData = new FormData(contactForm);
+    for (const pair of formData.entries()) {
+        console.log(`${pair[0]}: ${pair[1]}`);
+    }
+    // You can add code here to send the form data to a server using fetch or other methods
 });

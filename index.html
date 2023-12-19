@@ -3,16 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Travel Agency</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <h1>Travel Agency</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <!-- Your main content goes here -->
+        <section id="home">
+            <h2>Welcome to Our Travel Agency!</h2>
+            <p>Explore the world with our amazing travel packages.</p>
+            <button id="exploreBtn">Explore Destinations</button>
+        </section>
+        <section id="destinations">
+            <h2>Popular Destinations</h2>
+            <div class="destination">
+                <img src="destination1.jpg" alt="Destination 1">
+                <h3>Destination 1</h3>
+                <p>Explore the beauty of Destination 1 with our exclusive packages.</p>
+            </div>
+            <div class="destination">
+                <img src="destination2.jpg" alt="Destination 2">
+                <h3>Destination 2</h3>
+                <p>Visit Destination 2 and experience an unforgettable journey.</p>
+            </div>
+            <!-- More destination sections can be added here -->
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2023 Travel Agency</p>
